@@ -1,0 +1,14 @@
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\bin\Debug\netcoreapp2.1\YohandaMandala.deps.json
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\bin\Debug\netcoreapp2.1\YohandaMandala.runtimeconfig.json
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\bin\Debug\netcoreapp2.1\YohandaMandala.runtimeconfig.dev.json
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\bin\Debug\netcoreapp2.1\YohandaMandala.dll
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.csprojAssemblyReference.cache
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.csproj.CoreCompileInputs.cache
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.RazorAssemblyInfo.cache
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.RazorAssemblyInfo.cs
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.AssemblyInfoInputs.cache
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.AssemblyInfo.cs
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.RazorTargetAssemblyInfo.cache
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\bin\Debug\netcoreapp2.1\YohandaMandala.pdb
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.dll
+D:\Mandala Works\repos\YohandaMandala\YohandaMandala\obj\Debug\netcoreapp2.1\YohandaMandala.pdb
