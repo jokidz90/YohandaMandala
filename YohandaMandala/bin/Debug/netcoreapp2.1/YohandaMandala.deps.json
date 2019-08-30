@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "44183de899eedb984fb7fb0efe78c9d7b0db273a"
+    "signature": "583f243ad2545aadb205a08291241d8d8e42b5c9"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v2.1": {
       "YohandaMandala/1.0.0": {
         "dependencies": {
+          "AWSSDK.APIGateway": "3.3.102.31",
+          "AWSSDK.Core": "3.3.103.32",
           "AWSSDK.Extensions.NETCore.Setup": "3.3.100.1",
           "AWSSDK.S3": "3.3.102.15",
           "Amazon.Lambda.AspNetCoreServer": "3.1.0",
@@ -129,11 +131,25 @@
           "lib/netstandard2.0/Amazon.Lambda.Serialization.Json.dll": {}
         }
       },
-      "AWSSDK.Core/3.3.102.6": {
+      "AWSSDK.APIGateway/3.3.102.31": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.103.32"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.APIGateway.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.102.31"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.APIGateway.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.103.32": {
         "runtime": {
           "lib/netstandard2.0/AWSSDK.Core.dll": {
             "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.102.6"
+            "fileVersion": "3.3.103.32"
           }
         },
         "compile": {
@@ -142,7 +158,7 @@
       },
       "AWSSDK.Extensions.NETCore.Setup/3.3.100.1": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.102.6",
+          "AWSSDK.Core": "3.3.103.32",
           "Microsoft.Extensions.Configuration.Abstractions": "2.1.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.1.1"
@@ -159,7 +175,7 @@
       },
       "AWSSDK.S3/3.3.102.15": {
         "dependencies": {
-          "AWSSDK.Core": "3.3.102.6"
+          "AWSSDK.Core": "3.3.103.32"
         },
         "runtime": {
           "lib/netstandard2.0/AWSSDK.S3.dll": {
@@ -3668,12 +3684,19 @@
       "path": "amazon.lambda.serialization.json/1.5.0",
       "hashPath": "amazon.lambda.serialization.json.1.5.0.nupkg.sha512"
     },
-    "AWSSDK.Core/3.3.102.6": {
+    "AWSSDK.APIGateway/3.3.102.31": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7p8ZiQmfvo36dceEJmfuP3uk2EqzJqd2+e0Re38xwBvuKLPa0M67RBJGTaOXBKRgfPUSvZfkjxsnYCsQPxB9zw==",
-      "path": "awssdk.core/3.3.102.6",
-      "hashPath": "awssdk.core.3.3.102.6.nupkg.sha512"
+      "sha512": "sha512-HDCqZq6M1eYA7656nL0+a9otHhtBw9OHxHMLtsYuXa4SIQG+7zWduMmy9BuRuGT3rk7f2M0kNWlPGtwUWfeqrQ==",
+      "path": "awssdk.apigateway/3.3.102.31",
+      "hashPath": "awssdk.apigateway.3.3.102.31.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.3.103.32": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IrOH3QtrFVuz0+YRJanvzBKV5QO9uqUAVnSePiubYAXdyjX/9UxWfOUkP2BQndyL9HfBOZl/MZj9DZ0Ss8w+GA==",
+      "path": "awssdk.core/3.3.103.32",
+      "hashPath": "awssdk.core.3.3.103.32.nupkg.sha512"
     },
     "AWSSDK.Extensions.NETCore.Setup/3.3.100.1": {
       "type": "package",
@@ -4483,7 +4506,7 @@
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
+      "sha512": "sha512-+W7uAXYNar2Rf13oMzrj3dHWAm/2WgFtNvDteoqdrdxLHTUNmBo+GIGfLxVmCx7r+VOglj1PNFNaW2+aaEGlGg==",
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "hashPath": "microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512"
     },
@@ -5029,7 +5052,7 @@
     "runtime.native.System/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
+      "sha512": "sha512-qtImtSJsy2BJxX/ItuwM80PPpieWVwnAlasuIZE4l/NROkvqUwgP/7cFlA2gVkx2YJ75kgzvYMcuekueHVcE8w==",
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
@@ -5050,14 +5073,14 @@
     "runtime.native.System.Net.Http/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZVuZJqnnegJhd2k/PtAbbIcZ3aZeITq3sj06oKfMBSfphW3HDmk/t4ObvbOk/JA/swGR0LNqMksAh/f7gpTROg==",
+      "sha512": "sha512-OXbb4eonsjnXy82E+DGap3ws3NBwNtF0nQpWBE317XD+L+g6hmjwp1IgFz+00hN5aYwbn5uxtIAPRNhg9t0s9Q==",
       "path": "runtime.native.system.net.http/4.3.0",
       "hashPath": "runtime.native.system.net.http.4.3.0.nupkg.sha512"
     },
     "runtime.native.System.Security.Cryptography.Apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DloMk88juo0OuOWr56QG7MNchmafTLYWvABy36izkrLI5VledI0rq28KGs1i9wbpeT9NPQrx/wTf8U2vazqQ3Q==",
+      "sha512": "sha512-cSRKHDkYJF6XafHXk+JXGvA8UK30bhS39MLhdIwAlwlIqvZVo3Eo9OSuGQ9zsllM3wK1iDKB2cBgsYQW7kaifw==",
       "path": "runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
@@ -5085,7 +5108,7 @@
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
+      "sha512": "sha512-GXWx1vaE3DEhY1FwaGzvwSR3F6VK+b28wZeaki83QRzsoDYADQp0jvjQsee+ZLHgfzAEhPcWCSs2SjlgnC+QSw==",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "hashPath": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512"
     },
@@ -5183,14 +5206,14 @@
     "System.Collections.NonGeneric/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "sha512": "sha512-Gv0U4mzTbhL9JnBDIS1pCYmMeNulH666Q5tLMsfR21CGWGcCLpXcVa58zHn59y6kEot8VXSI1M/ruy2cH3b+yg==",
       "path": "system.collections.nongeneric/4.3.0",
       "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
     },
     "System.Collections.Specialized/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "sha512-/dGeiJMKvrfrQK634Si7TPQWJExKVlDMyncUjPVQtAN9T3/Hg+Vk9iK3PYpuqoXhBYYgMU83O31vkQ4lyEYv9Q==",
       "path": "system.collections.specialized/4.3.0",
       "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
     },
@@ -5246,7 +5269,7 @@
     "System.Diagnostics.StackTrace/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
+      "sha512": "sha512-t1UV8b0u2LFF0kDwuVFFxNByuKXAVr+dBGCT1j85noZ7T+thiK/qby3+MTLAr/1wR47UYoAshMkN7y+YI61nOQ==",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "hashPath": "system.diagnostics.stacktrace.4.3.0.nupkg.sha512"
     },
@@ -5288,7 +5311,7 @@
     "System.Globalization.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FhKmdR6MPG+pxow6wGtNAWdZh7noIOpdD5TwQ3CprzgIE1bBBoim0vbR1+AWsWjQmU7zXHgQo4TWSP6lCeiWcQ==",
+      "sha512": "sha512-R/UpQzRz9DsHK4vuLps4o6KxZmSYnW4Ejo9Zv3AHkr4WT4RpE/hRypXlV/XSErCansV7uQTYugnoe2ymBE6xJQ==",
       "path": "system.globalization.extensions/4.3.0",
       "hashPath": "system.globalization.extensions.4.3.0.nupkg.sha512"
     },
@@ -5421,7 +5444,7 @@
     "System.Reflection.Emit/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
+      "sha512": "sha512-/rNNjMkine9EHoyN+FuQoo1Z8SYvrSvRRt/ZvoTPlaWf/aNnXCrX+0tXYlZypbqCXeUAllKWE1UxKKITsnJVPA==",
       "path": "system.reflection.emit/4.3.0",
       "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
     },
@@ -5547,7 +5570,7 @@
     "System.Security.Claims/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-P/+BR/2lnc4PNDHt/TPBAWHVMLMRHsyYZbU1NphW4HIWzCggz8mJbTQQ3MKljFE7LS3WagmVFuBgoLcFzYXlkA==",
+      "sha512": "sha512-DFGJZRwLmpjp4zUM3QqnhuVhNS/hWt0kXAfIaIc16m/rhfXkDI/tNjuZVctFk9JdCWX42JPwoAYUo6mzVqF2xA==",
       "path": "system.security.claims/4.3.0",
       "hashPath": "system.security.claims.4.3.0.nupkg.sha512"
     },
@@ -5568,7 +5591,7 @@
     "System.Security.Cryptography.Csp/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-X4s/FCkEUnRGnwR3aSfVIkldBmtURMhmexALNTwpjklzxWU7yjMk7GHLKOZTNkgnWnE0q7+BCf9N2LVRWxewaA==",
+      "sha512": "sha512-THnu3n/qcKn5zXUQ5lcTQfBHZ6bMZpEgZipeeZk9HP5w9JVXIDvFMGasAa7YgAvcBjtGPvRoR4H5pa0oFVjKvA==",
       "path": "system.security.cryptography.csp/4.3.0",
       "hashPath": "system.security.cryptography.csp.4.3.0.nupkg.sha512"
     },
@@ -5582,7 +5605,7 @@
     "System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
+      "sha512": "sha512-WMX2barTwBHXGDXFmoIihJaxXX1rxhhYU8TqC13rlI0143lVXPVTnjph7ZB1s9V/6gz+FQAvfzbX9nC06UoS2A==",
       "path": "system.security.cryptography.openssl/4.3.0",
       "hashPath": "system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
@@ -5708,7 +5731,7 @@
     "System.Threading.Thread/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
+      "sha512": "sha512-DSS7IVlEfdQ+qh80Px+mNDIixaiw3qrKSSIF2IjTEn046LNXOmNmSXs7Q0SiXc36A8iXXDE2URsrHV2Vkm9bdg==",
       "path": "system.threading.thread/4.3.0",
       "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
     },

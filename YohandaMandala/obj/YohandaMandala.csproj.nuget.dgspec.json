@@ -43,6 +43,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+            "AWSSDK.APIGateway": {
+              "target": "Package",
+              "version": "[3.3.102.31, )"
+            },
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.3.103.32, )"
+            },
             "AWSSDK.Extensions.NETCore.Setup": {
               "target": "Package",
               "version": "[3.3.100.1, )"

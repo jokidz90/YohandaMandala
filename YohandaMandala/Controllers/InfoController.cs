@@ -15,17 +15,25 @@ namespace YohandaMandala.Controllers
         [HttpGet]
         public ResultModel Version()
         {
-            ResultModel data = new ResultModel();
+            ResultModel result = new ResultModel();
 
-            return data;
-        }
+            try
+            {
+                var data = new APIVersionModel();
+                var asmName = System.Reflection.Assembly.GetExecutingAssembly().GetName();
+                data.APIName = asmName.Name;
+                data.APIVersion = asmName.Version.ToString();
 
-        [HttpGet]
-        public ResultModel Test(string id)
-        {
-            ResultModel data = new ResultModel();
-            data.Data = id;
-            return data;
+                result.Data = data;
+                result.Status = "SUCCESS";
+                result.ResultCode = 200;
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.Message;
+            }
+
+            return result;
         }
     }
 }

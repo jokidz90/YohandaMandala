@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Amazon;
+using Amazon.APIGateway;
+using Amazon.APIGateway.Model;
+using Amazon.S3;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using YohandaMandala.Model;
@@ -14,35 +18,36 @@ namespace YohandaMandala.Controllers
     public class AWSController : ControllerBase
     {
         [HttpPost]
-        public ResultModel Execute([FromBody]AWSInputModel input)
+        public async Task<ResultModel> Execute([FromBody]AWSInputModel input)
         {
             ResultModel data = new ResultModel();
 
             try
             {
                 data.Data = input;
-                var cmdResult = new List<string>();
-                foreach (var line in input.CommandList)
-                {
-                    var escapedArgs = line.Replace("\"", "\\\"");
 
-                    var process = new Process()
-                    {
-                        StartInfo = new ProcessStartInfo
-                        {
-                            FileName = "/bin/bash",
-                            Arguments = $"-c \"{escapedArgs}\"",
-                            RedirectStandardOutput = true,
-                            UseShellExecute = false,
-                            CreateNoWindow = true,
-                        }
-                    };
-                    process.Start();
-                    string res = process.StandardOutput.ReadToEnd();
-                    process.WaitForExit();
-                    cmdResult.Add(res);
+                string apiKey = "AKIAJT7MFDZYBSCFFARA";
+                string apiSecret = "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";
+                using (var client = new AmazonAPIGatewayClient(apiKey, apiSecret, RegionEndpoint.USWest2))
+                {
+                    var req = new CreateDomainNameRequest();
+                    req.DomainName = input.DomainName;
+                    req.RegionalCertificateArn = "arn:aws:acm:us-west-2:982503114711:certificate/01f19db5-daed-4ba0-bb43-ea32ebcf3c27";
+                    req.SecurityPolicy = SecurityPolicy.TLS_1_2;
+                    req.EndpointConfiguration = new EndpointConfiguration { Types = { "REGIONAL" } };
+                    var res = await client.CreateDomainNameAsync(req);
+
+                    if (res.HttpStatusCode != System.Net.HttpStatusCode.Created)
+                        throw new Exception("Cannot create domain name "+req.DomainName);
+
+                    var basePathReq = new CreateBasePathMappingRequest();
+                    basePathReq.DomainName = input.DomainName;
+                    basePathReq.RestApiId = "8fvfjctqr0";
+                    basePathReq.Stage = "Prod";
+
+                    var basePathRes = await client.CreateBasePathMappingAsync(basePathReq);
+                    data.Data = basePathRes;
                 }
-                data.Message = string.Join(Environment.NewLine, cmdResult);
             }
             catch (Exception ex)
             {

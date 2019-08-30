@@ -7,6 +7,7 @@ namespace YohandaMandala.Model
 {
     public class AWSInputModel
     {
-       public List<string> CommandList { set; get; }
+        public string DomainName { set; get; }
+        //public List<string> CommandList { set; get; }
     }
 }
