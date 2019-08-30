@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace YohandaMandala
 {
@@ -25,7 +27,14 @@ namespace YohandaMandala
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                    .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                    .AddWebApiConventions()
+                     .AddJsonOptions(options =>
+                     {
+                         options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                         options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                     });
 
             // Add S3 to the ASP.NET Core dependency injection framework.
             services.AddAWSService<Amazon.S3.IAmazonS3>();
@@ -42,6 +51,10 @@ namespace YohandaMandala
             {
                 app.UseHsts();
             }
+
+            app.UseMvc(routes =>
+                routes.MapWebApiRoute("DefaultApi", "API/{controller}/{action}/{id?}")
+            );
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
