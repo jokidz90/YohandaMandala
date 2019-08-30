@@ -26,8 +26,8 @@ namespace YohandaMandala.Controllers
             {
                 data.Data = input;
 
-                string apiKey = "AKIAJT7MFDZYBSCFFARA";
-                string apiSecret = "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";
+                string apiKey = "";
+                string apiSecret = "";
                 using (var client = new AmazonAPIGatewayClient(apiKey, apiSecret, RegionEndpoint.USWest2))
                 {
                     var req = new CreateDomainNameRequest();
